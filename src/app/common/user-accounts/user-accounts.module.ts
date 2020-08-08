@@ -4,11 +4,7 @@ import { UserAccountService } from './services/user-account/user-account.service
 
 @Global()
 @Module({
-  providers: [
-    UserAccountService,
-  ],
-  exports: [
-    UserAccountService,
-  ]
+  providers: [UserAccountService],
+  exports: [UserAccountService],
 })
-export class UserAccountsModule { }
+export class UserAccountsModule {}

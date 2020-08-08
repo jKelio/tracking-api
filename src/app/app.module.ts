@@ -4,9 +4,6 @@ import { ApiModule } from './api/api.module';
 import { CommonModule } from './common/common.module';
 
 @Module({
-  imports: [
-    ApiModule,
-    CommonModule,
-  ],
+  imports: [ApiModule, CommonModule],
 })
-export class AppModule { }
+export class AppModule {}

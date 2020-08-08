@@ -2,7 +2,7 @@ import { Injectable } from '@nestjs/common';
 import { JwtService } from '@nestjs/jwt';
 import { UserAccountResource } from 'src/app/api/user-accounts/resources/user-accounts.resource';
 import { UserAccountEntity } from 'src/app/common/user-accounts/entities/user-account.entity';
-import { UserAccountService } from 'src/app/common/user-accounts/services/user-account.service';
+import { UserAccountService } from 'src/app/common/user-accounts/services/user-account/user-account.service';
 
 import { SecurityEntity } from '../entities/security.entity';
 

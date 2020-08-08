@@ -5,13 +5,7 @@ import { SecurityModule } from './security/security.module';
 
 @Global()
 @Module({
-    imports: [
-        AppConfigModule,
-        SecurityModule,
-    ],
-    exports: [
-        AppConfigModule,
-        SecurityModule,
-    ],
+  imports: [AppConfigModule, SecurityModule],
+  exports: [AppConfigModule, SecurityModule],
 })
-export class CommonModule { }
+export class CommonModule {}

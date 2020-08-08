@@ -7,4 +7,4 @@ import { LoginResourceMapper } from './mappers/login-resource.mapper';
   controllers: [LoginController],
   providers: [LoginResourceMapper],
 })
-export class LoginModule { }
+export class LoginModule {}

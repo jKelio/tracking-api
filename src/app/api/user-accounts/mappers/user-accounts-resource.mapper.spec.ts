@@ -9,7 +9,9 @@ describe('UserAccountsResourceMapper', () => {
       providers: [UserAccountsResourceMapper],
     }).compile();
 
-    provider = module.get<UserAccountsResourceMapper>(UserAccountsResourceMapper);
+    provider = module.get<UserAccountsResourceMapper>(
+      UserAccountsResourceMapper,
+    );
   });
 
   it('should be defined', () => {

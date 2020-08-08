@@ -16,26 +16,20 @@ import { LocalStrategy } from './strategies/local.strategy';
           defaultStrategy: config.get<string>('passport.defaultstrategy'),
         };
       },
-      inject: [ConfigService]
+      inject: [ConfigService],
     }),
     JwtModule.registerAsync({
       useFactory: (config: ConfigService) => {
         return {
           secret: config.get<string>('jwt.secret'),
           signOptions: { expiresIn: '8h' },
-        }
+        };
       },
-      inject: [ConfigService]
+      inject: [ConfigService],
     }),
     UserAccountsModule,
   ],
-  providers: [
-    AuthService,
-    LocalStrategy,
-    JwtStrategy,
-  ],
-  exports: [
-    AuthService,
-  ],
+  providers: [AuthService, LocalStrategy, JwtStrategy],
+  exports: [AuthService],
 })
-export class SecurityModule { }
+export class SecurityModule {}

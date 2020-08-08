@@ -4,9 +4,7 @@ import { UserAccountsController } from './controllers/user-accounts.controller';
 import { UserAccountsResourceMapper } from './mappers/user-accounts-resource.mapper';
 
 @Module({
-  controllers: [
-    UserAccountsController,
-  ],
-  providers: [UserAccountsResourceMapper]
+  controllers: [UserAccountsController],
+  providers: [UserAccountsResourceMapper],
 })
-export class UserAccountsModule { }
+export class UserAccountsModule {}

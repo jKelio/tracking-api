@@ -5,12 +5,11 @@ import { UserAccountResource } from '../resources/user-accounts.resource';
 
 @Injectable()
 export class UserAccountsResourceMapper {
+  public toResources(entities: UserAccountEntity[]): UserAccountResource[] {
+    return entities.map(this.toResource.bind(this));
+  }
 
-    public toResources(entities: UserAccountEntity[]): UserAccountResource[] {
-        return entities.map(this.toResource.bind(this));
-    }
-
-    public toResource(entity: UserAccountEntity): UserAccountResource {
-        return new UserAccountResource(entity.getId(), entity.getEmail());
-    }
+  public toResource(entity: UserAccountEntity): UserAccountResource {
+    return new UserAccountResource(entity.getId(), entity.getEmail());
+  }
 }

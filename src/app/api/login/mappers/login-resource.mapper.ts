@@ -5,8 +5,7 @@ import { LoginResource } from '../resources/login.resource';
 
 @Injectable()
 export class LoginResourceMapper {
-
-    public toResource(entity: SecurityEntity): LoginResource {
-        return new LoginResource(entity.isSuccessfull(), entity.getAccessToken());
-    }
+  public toResource(entity: SecurityEntity): LoginResource {
+    return new LoginResource(entity.isSuccessfull(), entity.getAccessToken());
+  }
 }

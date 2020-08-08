@@ -5,10 +5,6 @@ import { LoginModule } from './login/login.module';
 import { UserAccountsModule } from './user-accounts/user-accounts.module';
 
 @Module({
-  imports: [
-    LoginModule,
-    UserAccountsModule,
-    LocationsModule,
-  ],
+  imports: [LoginModule, UserAccountsModule, LocationsModule],
 })
-export class ApiModule { }
+export class ApiModule {}

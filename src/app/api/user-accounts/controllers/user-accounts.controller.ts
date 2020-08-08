@@ -1,7 +1,7 @@
 import { Body, Controller, Delete, Get, HttpCode, HttpStatus, Post, Put, Req, UseGuards } from '@nestjs/common';
 import { Request } from 'express';
 import { JwtAuthGuard } from 'src/app/common/security/guards/jwt-auth.guard';
-import { UserAccountService } from 'src/app/common/user-accounts/services/user-account.service';
+import { UserAccountService } from 'src/app/common/user-accounts/services/user-account/user-account.service';
 
 import { ChangePasswordDto } from '../dtos/change-password.dto';
 import { CreateUserDto } from '../dtos/create-user.dto';

@@ -1,7 +1,7 @@
 import { BadRequestException, ConflictException, ForbiddenException, Injectable, NotFoundException } from '@nestjs/common';
 import { v4 as generateUniqueUniversallyIdentifier } from 'uuid';
 
-import { UserAccountEntity } from '../entities/user-account.entity';
+import { UserAccountEntity } from '../../entities/user-account.entity';
 
 @Injectable()
 export class UserAccountService {
@@ -12,7 +12,7 @@ export class UserAccountService {
         this.users = [
             new UserAccountEntity(generateUniqueUniversallyIdentifier(), 'mani', 'test'),
             new UserAccountEntity(generateUniqueUniversallyIdentifier(), 'leon', 'test'),
-            new UserAccountEntity(generateUniqueUniversallyIdentifier(), 'testuser', 'test'),
+            new UserAccountEntity("test-id", 'testuser', 'test'),
         ];
     }
 

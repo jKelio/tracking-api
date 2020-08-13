@@ -1,11 +1,4 @@
-import {
-  Controller,
-  HttpStatus,
-  Post,
-  Req,
-  Res,
-  UseGuards,
-} from '@nestjs/common';
+import { Controller, HttpStatus, Post, Req, Res, UseGuards } from '@nestjs/common';
 import { AuthGuard } from '@nestjs/passport';
 import { Request, Response } from 'express';
 import { AuthService } from 'src/app/common/security/services/auth.service';
@@ -17,7 +10,7 @@ export class LoginController {
   constructor(
     private authService: AuthService,
     private mapper: LoginResourceMapper,
-  ) {}
+  ) { }
 
   @UseGuards(AuthGuard('local'))
   @Post()
